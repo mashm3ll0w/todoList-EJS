@@ -10,7 +10,8 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
 	var today = new Date();
 	var currentDay = today.getDay();
-	var day = "";
+  var day = "";
+  //var time = today.getTime();
 
 	switch (currentDay) {
 		case 0:
@@ -39,7 +40,7 @@ app.get("/", (req, res) => {
 			break;
 	}
 
-	res.render("list", { dayOfWeek: day });
+	res.render("list", { dayOfWeek: day});
 });
 
 app.listen(port, () => {
