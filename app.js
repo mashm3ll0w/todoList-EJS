@@ -7,6 +7,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const port = process.env.PORT || 8080;
 app.set("view engine", "ejs");
 
+var items = ["Item 01", "Item 02", "Item 03"];
+
 app.get("/", (req, res) => {
 	var today = new Date();
 	var options = {
@@ -18,7 +20,13 @@ app.get("/", (req, res) => {
 
 	var day = today.toLocaleDateString("en-US", options);
 
-	res.render("list", { dayToday: day});
+	res.render("list", { dayToday: day, newListItems: items });
+});
+
+app.post("/", (req, res) => {
+	var item = req.body.newItem;
+	items.push(item);
+	res.redirect("/");
 });
 
 app.listen(port, () => {
