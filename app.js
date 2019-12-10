@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 const port = process.env.PORT || 8080;
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 
 var items = ["Item 01", "Item 02", "Item 03"];
 
