@@ -21,19 +21,15 @@
 
 		<h1><%= dayToday %></h1>
 
-		<!-- USE A FOR EACH LOOP TO LOOP THROUGH THE ITEMS ARRAY
-		<% newListItems.forEach(function(newListItem){ %>
-		<li><%= newListItem %></li>
-		<% }); %> -->
-
-		<!-- USE A FOR LOOP TO SHOW THE DATA -->
-		<% for(var i = 0; i < newListItems.length; i++){ %>
-		<li><%=newListItems[i]%></li>
-		<% } %>
-		
-		<form action="/" method="POST">
-			<input type="text" name="newItem" placeholder="Add ToDo Item..." autocapitalize="on" />
-			<button type="submit">Add</button>
-		</form>
+		<!-- USE A FOR EACH LOOP TO LOOP THROUGH THE ITEMS ARRAY -->
+		<ul>
+			<% newListItems.forEach(function(newListItem){ %>
+			<li><%= newListItem %></li>
+			<% }); %>
+			<form action="/" method="POST">
+				<li><input type="text" name="newItem" placeholder="Add ToDo Item..." autocapitalize="on" /></li>
+				<button type="submit">Add</button>
+			</form>
+		</ul>
 	</body>
 </html>
