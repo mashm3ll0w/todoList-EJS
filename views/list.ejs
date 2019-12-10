@@ -20,5 +20,15 @@
 		<% } %> -->
 
 		<h1><%= dayToday %></h1>
+
+		<!-- USE A FOR EACH LOOP TO LOOP THROUGH THE ITEMS ARRAY -->
+		<% newListItems.forEach(function(newListItem){ %>
+		<li><%= newListItem %></li>
+		<% }); %>
+		
+		<form action="/" method="POST">
+			<input type="text" name="newItem" placeholder="Add ToDo Item..." autocapitalize="on"/>
+			<button type="submit">Add</button>
+		</form>
 	</body>
 </html>
