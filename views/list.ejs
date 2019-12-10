@@ -7,17 +7,18 @@
 		<title>ToDo List</title>
 	</head>
 	<body>
-
-    <!-- IMPORTANT TO NOTE
+		<!-- IMPORTANT TO NOTE
     In order for the control flow to render properly without any errors, you need to add
     the else statement immediately after the closing braces of an if statementbundleRenderer.renderToStream
     YOU CANT HAVE ELSE OR ELSE IF ON ITS OWN LINE BY ITSELF!!! 
     IMPORTANT TO NOTE -->
 
-		<% if (dayOfWeek === "Sunday" || dayOfWeek === "Saturday") { %>
-		<h1 style="color: purple;">Today is a <%= dayOfWeek %>!</h1>
+		<!-- <% if (dayToday === "Sunday" || dayToday === "Saturday") { %>
+		<h1 style="color: purple;">Today is a <%= dayToday %>!</h1>
 		<% } else { %>
-		<h1 style="color: crimson;">Today is a <%= dayOfWeek %>!</h1>
-		<% } %>
+		<h1 style="color: crimson;">Today is a <%= dayToday %>!</h1>
+		<% } %> -->
+
+		<h1><%= dayToday %></h1>
 	</body>
 </html>
